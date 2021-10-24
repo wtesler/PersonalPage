@@ -3,7 +3,7 @@
 	import NavBar from '$lib/nav/NavBar.svelte';
 </script>
 
-<img class='background' src='public/images/background.svg' alt='Background' />
+<img class='background' src='images/background.svg' alt='Background' />
 
 <NavBar />
 

@@ -6294,7 +6294,7 @@ function add_attribute(name, value, boolean) {
 }
 function afterUpdate() {
 }
-var css$6 = {
+var css$9 = {
   code: "#svelte-announcer.svelte-1j55zn5{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
   map: null
 };
@@ -6319,7 +6319,7 @@ var Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.props_1(props_1);
   if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
     $$bindings.props_2(props_2);
-  $$result.css.add(css$6);
+  $$result.css.add(css$9);
   {
     stores.page.set(page2);
   }
@@ -6373,9 +6373,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-d57e936f.js",
+      file: assets + "/_app/start-d43ae688.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-d57e936f.js", assets + "/_app/chunks/vendor-836cc791.js"]
+      js: [assets + "/_app/start-d43ae688.js", assets + "/_app/chunks/vendor-f24465b3.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6405,7 +6405,7 @@ function init(settings = default_settings) {
 var d = (s2) => s2.replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
 var empty = () => ({});
 var manifest = {
-  assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }, { "file": "svelte-welcome.png", "size": 360807, "type": "image/png" }, { "file": "svelte-welcome.webp", "size": 115470, "type": "image/webp" }],
+  assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "fonts/ProximaNova/ProximaNova-Black.woff", "size": 25200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Bold.woff", "size": 26336, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Extrabld.woff", "size": 26060, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Light.woff", "size": 42032, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Regular.woff", "size": 26128, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Semibold.woff", "size": 26200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Thin.woff", "size": 25032, "type": "font/woff" }, { "file": "images/background.svg", "size": 1604, "type": "image/svg+xml" }, { "file": "images/headshot.jpg", "size": 59605, "type": "image/jpeg" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }, { "file": "svelte-welcome.png", "size": 360807, "type": "image/png" }, { "file": "svelte-welcome.webp", "size": 115470, "type": "image/webp" }],
   layout: "src/routes/__layout.svelte",
   error: ".svelte-kit/build/components/error.svelte",
   routes: [
@@ -6414,6 +6414,13 @@ var manifest = {
       pattern: /^\/$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/index.svelte"],
+      b: [".svelte-kit/build/components/error.svelte"]
+    },
+    {
+      type: "page",
+      pattern: /^\/portfolio\/?$/,
+      params: empty,
+      a: ["src/routes/__layout.svelte", "src/routes/portfolio.svelte"],
       b: [".svelte-kit/build/components/error.svelte"]
     },
     {
@@ -6464,6 +6471,9 @@ var module_lookup = {
   "src/routes/index.svelte": () => Promise.resolve().then(function() {
     return index$1;
   }),
+  "src/routes/portfolio.svelte": () => Promise.resolve().then(function() {
+    return portfolio;
+  }),
   "src/routes/about.svelte": () => Promise.resolve().then(function() {
     return about;
   }),
@@ -6471,7 +6481,7 @@ var module_lookup = {
     return index;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-a152abe6.js", "css": ["assets/pages/__layout.svelte-1fda6867.css"], "js": ["pages/__layout.svelte-a152abe6.js", "chunks/vendor-836cc791.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-d4db4e6a.js", "css": [], "js": ["error.svelte-d4db4e6a.js", "chunks/vendor-836cc791.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-db3b553f.js", "css": ["assets/pages/index.svelte-b6f83df6.css"], "js": ["pages/index.svelte-db3b553f.js", "chunks/vendor-836cc791.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-b20ec17b.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/about.svelte-b20ec17b.js", "chunks/vendor-836cc791.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-1d2e317f.js", "css": ["assets/pages/todos/index.svelte-784042c1.css"], "js": ["pages/todos/index.svelte-1d2e317f.js", "chunks/vendor-836cc791.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-6d3b6476.js", "css": ["assets/pages/__layout.svelte-bc81510d.css", "assets/Button-1e201031.css"], "js": ["pages/__layout.svelte-6d3b6476.js", "chunks/vendor-f24465b3.js", "chunks/Button-68b39cfa.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-63fc5ea2.js", "css": [], "js": ["error.svelte-63fc5ea2.js", "chunks/vendor-f24465b3.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-d54c42b2.js", "css": ["assets/pages/index.svelte-c09d76aa.css", "assets/Button-1e201031.css"], "js": ["pages/index.svelte-d54c42b2.js", "chunks/vendor-f24465b3.js", "chunks/Button-68b39cfa.js"], "styles": [] }, "src/routes/portfolio.svelte": { "entry": "pages/portfolio.svelte-4146eaf9.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/portfolio.svelte-4146eaf9.js", "chunks/vendor-f24465b3.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-e88f06cb.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/about.svelte-e88f06cb.js", "chunks/vendor-f24465b3.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-f602abc8.js", "css": ["assets/pages/todos/index.svelte-784042c1.css"], "js": ["pages/todos/index.svelte-f602abc8.js", "chunks/vendor-f24465b3.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -6573,38 +6583,58 @@ var page = {
     return store.subscribe(fn);
   }
 };
-var logo = "/_app/assets/svelte-logo-87df40b8.svg";
-var css$5 = {
-  code: "header.svelte-t2wq17.svelte-t2wq17{display:flex;justify-content:space-between}.corner.svelte-t2wq17.svelte-t2wq17{width:3em;height:3em}.corner.svelte-t2wq17 a.svelte-t2wq17{display:flex;align-items:center;justify-content:center;width:100%;height:100%}.corner.svelte-t2wq17 img.svelte-t2wq17{width:2em;height:2em;object-fit:contain}nav.svelte-t2wq17.svelte-t2wq17{display:flex;justify-content:center;--background:rgba(255, 255, 255, 0.7)}svg.svelte-t2wq17.svelte-t2wq17{width:2em;height:3em;display:block}path.svelte-t2wq17.svelte-t2wq17{fill:var(--background)}ul.svelte-t2wq17.svelte-t2wq17{position:relative;padding:0;margin:0;height:3em;display:flex;justify-content:center;align-items:center;list-style:none;background:var(--background);background-size:contain}li.svelte-t2wq17.svelte-t2wq17{position:relative;height:100%}li.active.svelte-t2wq17.svelte-t2wq17::before{--size:6px;content:'';width:0;height:0;position:absolute;top:0;left:calc(50% - var(--size));border:var(--size) solid transparent;border-top:var(--size) solid var(--accent-color)}nav.svelte-t2wq17 a.svelte-t2wq17{display:flex;height:100%;align-items:center;padding:0 1em;color:var(--heading-color);font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;transition:color 0.2s linear}a.svelte-t2wq17.svelte-t2wq17:hover{color:var(--accent-color)}",
+var css$8 = {
+  code: ".button.svelte-1kj9i4{display:table;background-color:#4531c5;color:#fff;border-radius:5px;padding:var(--theme-spacing-3) var(--theme-spacing-4);cursor:pointer;user-select:none;font-size:16px;transition:background-color .25s}.button.svelte-1kj9i4:hover{background-color:#332594}",
   map: null
 };
-var Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+var Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { onClick } = $$props;
+  if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
+    $$bindings.onClick(onClick);
+  $$result.css.add(css$8);
+  return `<div class="${"button svelte-1kj9i4"}">${slots.default ? slots.default({}) : ``}
+</div>`;
+});
+var css$7 = {
+  code: ".outer.svelte-194cp6y{width:100%;padding:var(--theme-spacing-7);display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-194cp6y{font-weight:700;font-size:18px}.center.svelte-194cp6y{display:flex;flex-direction:row;position:absolute;left:0;right:0;align-items:center;justify-content:center;pointer-events:none}.link.svelte-194cp6y{padding:0 1.5px 1px 1.5px;margin:0 var(--theme-spacing-4);pointer-events:auto;border-bottom:2px solid transparent;text-decoration:none;color:black;font-weight:600}.link.active.svelte-194cp6y{border-bottom:2px solid black}.last.svelte-194cp6y{margin-left:auto}",
+  map: null
+};
+var NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  $$result.css.add(css$5);
+  const PATHS = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Portfolio", path: "/portfolio" }
+  ];
+  const onContactClick = () => {
+    console.log("CONTACT CLICK");
+  };
+  $$result.css.add(css$7);
   $$unsubscribe_page();
-  return `<header class="${"svelte-t2wq17"}"><div class="${"corner svelte-t2wq17"}"><a href="${"https://kit.svelte.dev"}" class="${"svelte-t2wq17"}"><img${add_attribute("src", logo, 0)} alt="${"SvelteKit"}" class="${"svelte-t2wq17"}"></a></div>
-
-	<nav class="${"svelte-t2wq17"}"><svg viewBox="${"0 0 2 3"}" aria-hidden="${"true"}" class="${"svelte-t2wq17"}"><path d="${"M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z"}" class="${"svelte-t2wq17"}"></path></svg>
-		<ul class="${"svelte-t2wq17"}"><li class="${["svelte-t2wq17", $page.path === "/" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${"/"}" class="${"svelte-t2wq17"}">Home</a></li>
-			<li class="${["svelte-t2wq17", $page.path === "/about" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${"/about"}" class="${"svelte-t2wq17"}">About</a></li>
-			<li class="${["svelte-t2wq17", $page.path === "/todos" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${"/todos"}" class="${"svelte-t2wq17"}">Todos</a></li></ul>
-		<svg viewBox="${"0 0 2 3"}" aria-hidden="${"true"}" class="${"svelte-t2wq17"}"><path d="${"M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z"}" class="${"svelte-t2wq17"}"></path></svg></nav>
-
-	<div class="${"corner svelte-t2wq17"}"></div>
-</header>`;
+  return `<nav class="${"outer svelte-194cp6y"}"><div class="${"first svelte-194cp6y"}">will tesler.
+	</div>
+	<div class="${"center svelte-194cp6y"}">${each(PATHS, (pathObj) => `<a class="${["link svelte-194cp6y", $page.path === pathObj.path ? "active" : ""].join(" ").trim()}" sveltekit:prefetch${add_attribute("href", pathObj.path, 0)}>${escape(pathObj.name)}
+			</a>`)}</div>
+	<div class="${"last svelte-194cp6y"}">${validate_component(Button, "Button").$$render($$result, { onClick: onContactClick }, {}, {
+    default: () => `Contact
+		`
+  })}</div>
+</nav>`;
 });
-var css$4 = {
-  code: "main.svelte-1izrdc8.svelte-1izrdc8{flex:1;display:flex;flex-direction:column;padding:1rem;width:100%;max-width:1024px;margin:0 auto;box-sizing:border-box}footer.svelte-1izrdc8.svelte-1izrdc8{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px}footer.svelte-1izrdc8 a.svelte-1izrdc8{font-weight:bold}@media(min-width: 480px){footer.svelte-1izrdc8.svelte-1izrdc8{padding:40px 0}}",
+var css$6 = {
+  code: ".background.svelte-1cldrb5{width:100%;height:100vh;object-fit:cover;position:fixed}",
   map: null
 };
 var _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$4);
-  return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
+  $$result.css.add(css$6);
+  return `<img class="${"background svelte-1cldrb5"}" src="${"images/background.svg"}" alt="${"Background"}">
 
-<main class="${"svelte-1izrdc8"}">${slots.default ? slots.default({}) : ``}</main>
+${validate_component(NavBar, "NavBar").$$render($$result, {}, {}, {})}
 
-<footer class="${"svelte-1izrdc8"}"><p>visit <a href="${"https://kit.svelte.dev"}" class="${"svelte-1izrdc8"}">kit.svelte.dev</a> to learn SvelteKit</p>
+<main class="${"main svelte-1cldrb5"}">${slots.default ? slots.default({}) : ``}</main>
+
+<footer><p>visit <a href="${"https://kit.svelte.dev"}">kit.svelte.dev</a> to learn SvelteKit</p>
 </footer>`;
 });
 var __layout = /* @__PURE__ */ Object.freeze({
@@ -6776,8 +6806,8 @@ function spring(value, opts = {}) {
   };
   return spring2;
 }
-var css$3 = {
-  code: ".counter.svelte-139m1ow.svelte-139m1ow{display:flex;border-top:1px solid rgba(0, 0, 0, 0.1);border-bottom:1px solid rgba(0, 0, 0, 0.1);margin:1rem 0}.counter.svelte-139m1ow button.svelte-139m1ow{width:2em;padding:0;display:flex;align-items:center;justify-content:center;border:0;background-color:transparent;color:var(--text-color);font-size:2rem}.counter.svelte-139m1ow button.svelte-139m1ow:hover{background-color:var(--secondary-color)}svg.svelte-139m1ow.svelte-139m1ow{width:25%;height:25%}path.svelte-139m1ow.svelte-139m1ow{vector-effect:non-scaling-stroke;stroke-width:2px;stroke:var(--text-color)}.counter-viewport.svelte-139m1ow.svelte-139m1ow{width:8em;height:4em;overflow:hidden;text-align:center;position:relative}.counter-viewport.svelte-139m1ow strong.svelte-139m1ow{position:absolute;display:flex;width:100%;height:100%;font-weight:400;color:var(--accent-color);font-size:4rem;align-items:center;justify-content:center}.counter-digits.svelte-139m1ow.svelte-139m1ow{position:absolute;width:100%;height:100%}",
+var css$5 = {
+  code: ".counter.svelte-18fdd0i.svelte-18fdd0i{display:flex;border-top:1px solid rgba(0, 0, 0, 0.1);border-bottom:1px solid rgba(0, 0, 0, 0.1);margin:1rem 0}.counter.svelte-18fdd0i button.svelte-18fdd0i{width:2em;padding:0;display:flex;align-items:center;justify-content:center;border:0;background-color:transparent;color:var(--text-color);font-size:2rem}.counter.svelte-18fdd0i button.svelte-18fdd0i:hover{background-color:var(--secondary-color)}svg.svelte-18fdd0i.svelte-18fdd0i{width:25%;height:25%}path.svelte-18fdd0i.svelte-18fdd0i{vector-effect:non-scaling-stroke;stroke-width:2px;stroke:var(--text-color)}.counter-viewport.svelte-18fdd0i.svelte-18fdd0i{width:8em;height:4em;overflow:hidden;text-align:center;position:relative}.counter-viewport.svelte-18fdd0i strong.svelte-18fdd0i{position:absolute;display:flex;width:100%;height:100%;font-weight:400;color:var(--accent-color);font-size:4rem;align-items:center;justify-content:center}.counter-digits.svelte-18fdd0i.svelte-18fdd0i{position:absolute;width:100%;height:100%}",
   map: null
 };
 function modulo(n, m) {
@@ -6785,38 +6815,53 @@ function modulo(n, m) {
 }
 var Counter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let offset;
+  let offsetPercent;
   let $displayed_count, $$unsubscribe_displayed_count;
   let count = 0;
   const displayed_count = spring();
   $$unsubscribe_displayed_count = subscribe(displayed_count, (value) => $displayed_count = value);
-  $$result.css.add(css$3);
+  $$result.css.add(css$5);
   {
     displayed_count.set(count);
   }
   offset = modulo($displayed_count, 1);
+  offsetPercent = offset * 100;
   $$unsubscribe_displayed_count();
-  return `<div class="${"counter svelte-139m1ow"}"><button aria-label="${"Decrease the counter by one"}" class="${"svelte-139m1ow"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-139m1ow"}"><path d="${"M0,0.5 L1,0.5"}" class="${"svelte-139m1ow"}"></path></svg></button>
+  return `<div class="${"counter svelte-18fdd0i"}"><button aria-label="${"Decrease the counter by one"}" class="${"svelte-18fdd0i"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-18fdd0i"}"><path d="${"M0,0.5 L1,0.5"}" class="${"svelte-18fdd0i"}"></path></svg></button>
 
-	<div class="${"counter-viewport svelte-139m1ow"}"><div class="${"counter-digits svelte-139m1ow"}" style="${"transform: translate(0, " + escape(100 * offset) + "%)"}"><strong style="${"top: -100%"}" aria-hidden="${"true"}" class="${"svelte-139m1ow"}">${escape(Math.floor($displayed_count + 1))}</strong>
-			<strong class="${"svelte-139m1ow"}">${escape(Math.floor($displayed_count))}</strong></div></div>
+	<div class="${"counter-viewport svelte-18fdd0i"}"><div class="${"counter-digits svelte-18fdd0i"}" style="${"transform: translate(0, " + escape(offsetPercent) + "%)"}"><strong style="${"top: -100%"}" aria-hidden="${"true"}" class="${"svelte-18fdd0i"}">${escape(Math.floor($displayed_count + 1))}</strong>
+			<strong class="${"svelte-18fdd0i"}">${escape(Math.floor($displayed_count))}</strong></div></div>
 
-	<button aria-label="${"Increase the counter by one"}" class="${"svelte-139m1ow"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-139m1ow"}"><path d="${"M0,0.5 L1,0.5 M0.5,0 L0.5,1"}" class="${"svelte-139m1ow"}"></path></svg></button>
+	<button aria-label="${"Increase the counter by one"}" class="${"svelte-18fdd0i"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-18fdd0i"}"><path d="${"M0,0.5 L1,0.5 M0.5,0 L0.5,1"}" class="${"svelte-18fdd0i"}"></path></svg></button>
 </div>`;
 });
-var css$2 = {
-  code: "section.svelte-mjk9ig.svelte-mjk9ig{display:flex;flex-direction:column;justify-content:center;align-items:center;flex:1}h1.svelte-mjk9ig.svelte-mjk9ig{width:100%}.welcome.svelte-mjk9ig.svelte-mjk9ig{position:relative;width:100%;height:0;padding:0 0 calc(100% * 495 / 2048) 0}.welcome.svelte-mjk9ig img.svelte-mjk9ig{position:absolute;width:100%;height:100%;top:0;display:block}",
+var css$4 = {
+  code: ".outer.svelte-14t06o5{width:100%;max-width:1000px;padding:0 var(--theme-spacing-6) var(--theme-spacing-6) var(--theme-spacing-6);display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-14t06o5{flex:6;padding-right:var(--theme-spacing-5)}.last.svelte-14t06o5{flex:5;padding-left:var(--theme-spacing-5)}.image.svelte-14t06o5{width:100%;object-fit:cover}.heading1.svelte-14t06o5{font-size:54px;font-weight:700}.heading2.svelte-14t06o5{font-size:18px;font-weight:400;line-height:28px;margin-top:var(--theme-spacing-3)}.button.svelte-14t06o5{margin-top:var(--theme-spacing-4)}@media screen and (max-width: 700px){.outer.svelte-14t06o5{flex-direction:column}.last.svelte-14t06o5{margin-top:var(--theme-spacing-5)}}",
   map: null
 };
-var prerender$1 = true;
+var Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$4);
+  return `<div class="${"outer svelte-14t06o5"}"><div class="${"first svelte-14t06o5"}"><img class="${"image svelte-14t06o5"}" src="${"images/headshot.jpg"}" alt="${"Profile"}"></div>
+	<div class="${"last svelte-14t06o5"}"><h1 class="${"heading1 svelte-14t06o5"}">Will Tesler
+		</h1>
+		<h2 class="${"heading2 svelte-14t06o5"}">Software Engineer and Web Developer at the forefront of the Modern Web.
+		</h2>
+		<div class="${"button svelte-14t06o5"}">${validate_component(Button, "Button").$$render($$result, {}, {}, {
+    default: () => `Contact
+			`
+  })}</div></div>
+</div>`;
+});
+var css$3 = {
+  code: "section.svelte-1ugkb6p{width:100%;display:flex;flex-direction:column;align-items:center}",
+  map: null
+};
+var prerender$2 = true;
 var Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$2);
+  $$result.css.add(css$3);
   return `${$$result.head += `${$$result.title = `<title>Home</title>`, ""}`, ""}
 
-<section class="${"svelte-mjk9ig"}"><h1 class="${"svelte-mjk9ig"}"><div class="${"welcome svelte-mjk9ig"}"><picture><source srcset="${"svelte-welcome.webp"}" type="${"image/webp"}">
-				<img src="${"svelte-welcome.png"}" alt="${"Welcome"}" class="${"svelte-mjk9ig"}"></picture></div>
-
-		to your new<br>SvelteKit app
-	</h1>
+<section class="${"svelte-1ugkb6p"}">${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})}
 
 	<h2>try editing <strong>src/routes/index.svelte</strong></h2>
 
@@ -6827,6 +6872,44 @@ var index$1 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Routes,
+  prerender: prerender$2
+});
+var css$2 = {
+  code: ".content.svelte-cf77e8{width:100%;max-width:var(--column-width);margin:var(--column-margin-top) auto 0 auto}",
+  map: null
+};
+var hydrate$1 = dev;
+var router$1 = browser;
+var prerender$1 = true;
+var Portfolio = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$2);
+  return `${$$result.head += `${$$result.title = `<title>About</title>`, ""}`, ""}
+
+<div class="${"content svelte-cf77e8"}"><h1>About this app</h1>
+
+	<p>This is a <a href="${"https://kit.svelte.dev"}">SvelteKit</a> app. You can make your own by typing the
+		following into your command line and following the prompts:
+	</p>
+
+	
+	<pre>npm init svelte@next</pre>
+
+	<p>The page you&#39;re looking at is purely static HTML, with no client-side interactivity needed.
+		Because of that, we don&#39;t need to load any JavaScript. Try viewing the page&#39;s source, or opening
+		the devtools network panel and reloading.
+	</p>
+
+	<p>The <a href="${"/todos"}">TODOs</a> page illustrates SvelteKit&#39;s data loading and form handling. Try using
+		it with JavaScript disabled!
+	</p>
+</div>`;
+});
+var portfolio = /* @__PURE__ */ Object.freeze({
+  __proto__: null,
+  [Symbol.toStringTag]: "Module",
+  "default": Portfolio,
+  hydrate: hydrate$1,
+  router: router$1,
   prerender: prerender$1
 });
 var css$1 = {

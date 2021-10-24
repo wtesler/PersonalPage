@@ -28,8 +28,4 @@
 		flex-direction: column;
 		align-items: center;
 	}
-
-	h1 {
-		width: 100%;
-	}
 </style>

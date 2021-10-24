@@ -5,7 +5,7 @@ import Button from '$lib/button/Button.svelte';
 
 <div class='outer'>
 	<div class='first'>
-		<img class='image' src='public/images/headshot.jpg' alt='Profile Picture'>
+		<img class='image' src='images/headshot.jpg' alt='Profile'>
 	</div>
 	<div class='last'>
 		<h1 class='heading1'>
