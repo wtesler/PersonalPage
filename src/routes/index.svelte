@@ -3,7 +3,7 @@
 </script>
 
 <script>
-	import Counter from '$lib/Counter.svelte';
+	import Counter from '$lib/counter/Counter.svelte';
 </script>
 
 <svelte:head>

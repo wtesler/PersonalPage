@@ -1,5 +1,5 @@
 <script context="module">
-	import { enhance } from '$lib/form';
+	import { enhance } from '$lib/form/form';
 
 	// see https://kit.svelte.dev/docs#loading
 	export const load = async ({ fetch }) => {
