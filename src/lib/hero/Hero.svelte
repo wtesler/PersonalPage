@@ -1,11 +1,13 @@
 <script>
-
 import Button from '$lib/button/Button.svelte';
+import HeroProfile from '$lib/hero/profile/HeroProfile.svelte';
 </script>
 
 <div class='outer'>
 	<div class='first'>
-		<img class='image' src='images/headshot.jpg' alt='Profile'>
+		<div class='profileContainer'>
+			<HeroProfile />
+		</div>
 	</div>
 	<div class='last'>
 		<h1 class='heading1'>
@@ -34,7 +36,7 @@ import Button from '$lib/button/Button.svelte';
 	}
 
 	.first {
-		flex: 6;
+		flex: 5;
 		display: flex;
 		/*padding-right: var(--theme-spacing-9);*/
 	}
@@ -44,9 +46,11 @@ import Button from '$lib/button/Button.svelte';
     /*padding-left: var(--theme-spacing-9);*/
   }
 
-	.image {
+	.profileContainer {
 		width: 90%;
-		object-fit: cover;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.heading1 {
