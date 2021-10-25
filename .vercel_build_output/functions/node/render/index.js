@@ -5183,28 +5183,28 @@ function stringifyString(str) {
 }
 function noop$1() {
 }
-function safe_not_equal$1(a, b) {
+function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
 }
 Promise.resolve();
-var subscriber_queue$1 = [];
-function writable$1(value, start = noop$1) {
+var subscriber_queue = [];
+function writable(value, start = noop$1) {
   let stop;
   const subscribers = new Set();
   function set(new_value) {
-    if (safe_not_equal$1(value, new_value)) {
+    if (safe_not_equal(value, new_value)) {
       value = new_value;
       if (stop) {
-        const run_queue = !subscriber_queue$1.length;
+        const run_queue = !subscriber_queue.length;
         for (const subscriber of subscribers) {
           subscriber[1]();
-          subscriber_queue$1.push(subscriber, value);
+          subscriber_queue.push(subscriber, value);
         }
         if (run_queue) {
-          for (let i = 0; i < subscriber_queue$1.length; i += 2) {
-            subscriber_queue$1[i][0](subscriber_queue$1[i + 1]);
+          for (let i = 0; i < subscriber_queue.length; i += 2) {
+            subscriber_queue[i][0](subscriber_queue[i + 1]);
           }
-          subscriber_queue$1.length = 0;
+          subscriber_queue.length = 0;
         }
       }
     }
@@ -5321,11 +5321,11 @@ async function render_response({
         is_private = true;
       maxage = loaded.maxage;
     });
-    const session = writable$1($session);
+    const session = writable($session);
     const props = {
       stores: {
-        page: writable$1(null),
-        navigating: writable$1(null),
+        page: writable(null),
+        navigating: writable(null),
         session
       },
       page: page2,
@@ -6171,42 +6171,12 @@ function blank_object() {
 function run_all(fns) {
   fns.forEach(run);
 }
-function safe_not_equal(a, b) {
-  return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
-}
 function subscribe(store, ...callbacks) {
   if (store == null) {
     return noop;
   }
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
-}
-var is_client = typeof window !== "undefined";
-var now = is_client ? () => window.performance.now() : () => Date.now();
-var raf = is_client ? (cb) => requestAnimationFrame(cb) : noop;
-var tasks = new Set();
-function run_tasks(now2) {
-  tasks.forEach((task) => {
-    if (!task.c(now2)) {
-      tasks.delete(task);
-      task.f();
-    }
-  });
-  if (tasks.size !== 0)
-    raf(run_tasks);
-}
-function loop(callback) {
-  let task;
-  if (tasks.size === 0)
-    raf(run_tasks);
-  return {
-    promise: new Promise((fulfill) => {
-      tasks.add(task = { c: callback, f: fulfill });
-    }),
-    abort() {
-      tasks.delete(task);
-    }
-  };
 }
 var current_component;
 function set_current_component(component) {
@@ -6373,9 +6343,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-d43ae688.js",
+      file: assets + "/_app/start-dc2f4f20.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-d43ae688.js", assets + "/_app/chunks/vendor-f24465b3.js"]
+      js: [assets + "/_app/start-dc2f4f20.js", assets + "/_app/chunks/vendor-dd5e282b.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6405,7 +6375,7 @@ function init(settings = default_settings) {
 var d = (s2) => s2.replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
 var empty = () => ({});
 var manifest = {
-  assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "fonts/ProximaNova/ProximaNova-Black.woff", "size": 25200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Bold.woff", "size": 26336, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Extrabld.woff", "size": 26060, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Light.woff", "size": 42032, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Regular.woff", "size": 26128, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Semibold.woff", "size": 26200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Thin.woff", "size": 25032, "type": "font/woff" }, { "file": "images/background.svg", "size": 1604, "type": "image/svg+xml" }, { "file": "images/headshot.jpg", "size": 59605, "type": "image/jpeg" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }, { "file": "svelte-welcome.png", "size": 360807, "type": "image/png" }, { "file": "svelte-welcome.webp", "size": 115470, "type": "image/webp" }],
+  assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "fonts/ProximaNova/ProximaNova-Black.woff", "size": 25200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Bold.woff", "size": 26336, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Extrabld.woff", "size": 26060, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Light.woff", "size": 42032, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Regular.woff", "size": 26128, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Semibold.woff", "size": 26200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Thin.woff", "size": 25032, "type": "font/woff" }, { "file": "images/background.svg", "size": 1604, "type": "image/svg+xml" }, { "file": "images/headshot.jpg", "size": 59605, "type": "image/jpeg" }, { "file": "images/headshot.png", "size": 121321, "type": "image/png" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }, { "file": "svelte-welcome.png", "size": 360807, "type": "image/png" }, { "file": "svelte-welcome.webp", "size": 115470, "type": "image/webp" }],
   layout: "src/routes/__layout.svelte",
   error: ".svelte-kit/build/components/error.svelte",
   routes: [
@@ -6481,7 +6451,7 @@ var module_lookup = {
     return index;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-6d3b6476.js", "css": ["assets/pages/__layout.svelte-bc81510d.css", "assets/Button-1e201031.css"], "js": ["pages/__layout.svelte-6d3b6476.js", "chunks/vendor-f24465b3.js", "chunks/Button-68b39cfa.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-63fc5ea2.js", "css": [], "js": ["error.svelte-63fc5ea2.js", "chunks/vendor-f24465b3.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-d54c42b2.js", "css": ["assets/pages/index.svelte-c09d76aa.css", "assets/Button-1e201031.css"], "js": ["pages/index.svelte-d54c42b2.js", "chunks/vendor-f24465b3.js", "chunks/Button-68b39cfa.js"], "styles": [] }, "src/routes/portfolio.svelte": { "entry": "pages/portfolio.svelte-4146eaf9.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/portfolio.svelte-4146eaf9.js", "chunks/vendor-f24465b3.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-e88f06cb.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/about.svelte-e88f06cb.js", "chunks/vendor-f24465b3.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-f602abc8.js", "css": ["assets/pages/todos/index.svelte-784042c1.css"], "js": ["pages/todos/index.svelte-f602abc8.js", "chunks/vendor-f24465b3.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-c0166270.js", "css": ["assets/pages/__layout.svelte-09b7aa13.css", "assets/Button-1e201031.css"], "js": ["pages/__layout.svelte-c0166270.js", "chunks/vendor-dd5e282b.js", "chunks/Button-28fad74b.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-976283ef.js", "css": [], "js": ["error.svelte-976283ef.js", "chunks/vendor-dd5e282b.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-417cc346.js", "css": ["assets/pages/index.svelte-02fa6d71.css", "assets/Button-1e201031.css"], "js": ["pages/index.svelte-417cc346.js", "chunks/vendor-dd5e282b.js", "chunks/Button-28fad74b.js"], "styles": [] }, "src/routes/portfolio.svelte": { "entry": "pages/portfolio.svelte-659b4b73.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/portfolio.svelte-659b4b73.js", "chunks/vendor-dd5e282b.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-889478dc.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/about.svelte-889478dc.js", "chunks/vendor-dd5e282b.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-4f579a74.js", "css": ["assets/pages/todos/index.svelte-784042c1.css"], "js": ["pages/todos/index.svelte-4f579a74.js", "chunks/vendor-dd5e282b.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -6667,193 +6637,36 @@ var error = /* @__PURE__ */ Object.freeze({
   "default": Error$1,
   load: load$1
 });
-var subscriber_queue = [];
-function writable(value, start = noop) {
-  let stop;
-  const subscribers = new Set();
-  function set(new_value) {
-    if (safe_not_equal(value, new_value)) {
-      value = new_value;
-      if (stop) {
-        const run_queue = !subscriber_queue.length;
-        for (const subscriber of subscribers) {
-          subscriber[1]();
-          subscriber_queue.push(subscriber, value);
-        }
-        if (run_queue) {
-          for (let i = 0; i < subscriber_queue.length; i += 2) {
-            subscriber_queue[i][0](subscriber_queue[i + 1]);
-          }
-          subscriber_queue.length = 0;
-        }
-      }
-    }
-  }
-  function update(fn) {
-    set(fn(value));
-  }
-  function subscribe2(run2, invalidate = noop) {
-    const subscriber = [run2, invalidate];
-    subscribers.add(subscriber);
-    if (subscribers.size === 1) {
-      stop = start(set) || noop;
-    }
-    run2(value);
-    return () => {
-      subscribers.delete(subscriber);
-      if (subscribers.size === 0) {
-        stop();
-        stop = null;
-      }
-    };
-  }
-  return { set, update, subscribe: subscribe2 };
-}
-function is_date(obj) {
-  return Object.prototype.toString.call(obj) === "[object Date]";
-}
-function tick_spring(ctx, last_value, current_value, target_value) {
-  if (typeof current_value === "number" || is_date(current_value)) {
-    const delta = target_value - current_value;
-    const velocity = (current_value - last_value) / (ctx.dt || 1 / 60);
-    const spring2 = ctx.opts.stiffness * delta;
-    const damper = ctx.opts.damping * velocity;
-    const acceleration = (spring2 - damper) * ctx.inv_mass;
-    const d2 = (velocity + acceleration) * ctx.dt;
-    if (Math.abs(d2) < ctx.opts.precision && Math.abs(delta) < ctx.opts.precision) {
-      return target_value;
-    } else {
-      ctx.settled = false;
-      return is_date(current_value) ? new Date(current_value.getTime() + d2) : current_value + d2;
-    }
-  } else if (Array.isArray(current_value)) {
-    return current_value.map((_, i) => tick_spring(ctx, last_value[i], current_value[i], target_value[i]));
-  } else if (typeof current_value === "object") {
-    const next_value = {};
-    for (const k in current_value) {
-      next_value[k] = tick_spring(ctx, last_value[k], current_value[k], target_value[k]);
-    }
-    return next_value;
-  } else {
-    throw new Error(`Cannot spring ${typeof current_value} values`);
-  }
-}
-function spring(value, opts = {}) {
-  const store = writable(value);
-  const { stiffness = 0.15, damping = 0.8, precision = 0.01 } = opts;
-  let last_time;
-  let task;
-  let current_token;
-  let last_value = value;
-  let target_value = value;
-  let inv_mass = 1;
-  let inv_mass_recovery_rate = 0;
-  let cancel_task = false;
-  function set(new_value, opts2 = {}) {
-    target_value = new_value;
-    const token = current_token = {};
-    if (value == null || opts2.hard || spring2.stiffness >= 1 && spring2.damping >= 1) {
-      cancel_task = true;
-      last_time = now();
-      last_value = new_value;
-      store.set(value = target_value);
-      return Promise.resolve();
-    } else if (opts2.soft) {
-      const rate = opts2.soft === true ? 0.5 : +opts2.soft;
-      inv_mass_recovery_rate = 1 / (rate * 60);
-      inv_mass = 0;
-    }
-    if (!task) {
-      last_time = now();
-      cancel_task = false;
-      task = loop((now2) => {
-        if (cancel_task) {
-          cancel_task = false;
-          task = null;
-          return false;
-        }
-        inv_mass = Math.min(inv_mass + inv_mass_recovery_rate, 1);
-        const ctx = {
-          inv_mass,
-          opts: spring2,
-          settled: true,
-          dt: (now2 - last_time) * 60 / 1e3
-        };
-        const next_value = tick_spring(ctx, last_value, value, target_value);
-        last_time = now2;
-        last_value = value;
-        store.set(value = next_value);
-        if (ctx.settled) {
-          task = null;
-        }
-        return !ctx.settled;
-      });
-    }
-    return new Promise((fulfil) => {
-      task.promise.then(() => {
-        if (token === current_token)
-          fulfil();
-      });
-    });
-  }
-  const spring2 = {
-    set,
-    update: (fn, opts2) => set(fn(target_value, value), opts2),
-    subscribe: store.subscribe,
-    stiffness,
-    damping,
-    precision
-  };
-  return spring2;
-}
 var css$5 = {
-  code: ".counter.svelte-18fdd0i.svelte-18fdd0i{display:flex;border-top:1px solid rgba(0, 0, 0, 0.1);border-bottom:1px solid rgba(0, 0, 0, 0.1);margin:1rem 0}.counter.svelte-18fdd0i button.svelte-18fdd0i{width:2em;padding:0;display:flex;align-items:center;justify-content:center;border:0;background-color:transparent;color:var(--text-color);font-size:2rem}.counter.svelte-18fdd0i button.svelte-18fdd0i:hover{background-color:var(--secondary-color)}svg.svelte-18fdd0i.svelte-18fdd0i{width:25%;height:25%}path.svelte-18fdd0i.svelte-18fdd0i{vector-effect:non-scaling-stroke;stroke-width:2px;stroke:var(--text-color)}.counter-viewport.svelte-18fdd0i.svelte-18fdd0i{width:8em;height:4em;overflow:hidden;text-align:center;position:relative}.counter-viewport.svelte-18fdd0i strong.svelte-18fdd0i{position:absolute;display:flex;width:100%;height:100%;font-weight:400;color:var(--accent-color);font-size:4rem;align-items:center;justify-content:center}.counter-digits.svelte-18fdd0i.svelte-18fdd0i{position:absolute;width:100%;height:100%}",
+  code: ".outer.svelte-1y3qlhg{position:relative;--hero-profile-bg-color:#e14765FF;--hero-profile-bg-shadow:#e1476588}.bg.svelte-1y3qlhg{width:95%;height:90%;top:10%;left:0;right:0;margin:0 auto;position:absolute;background-color:var(--hero-profile-bg-color);border-radius:200px 200px 0 0;box-shadow:5px 5px 40px 0 var(--hero-profile-bg-shadow)}.image.svelte-1y3qlhg{width:100%;max-width:300px;object-fit:cover;position:relative}.name.svelte-1y3qlhg{position:absolute;transform:rotateZ(-45deg);font-weight:900;font-size:70px;top:15%;left:-5%;margin:auto 0;color:white;text-shadow:-5px -5px var(--hero-profile-bg-color);user-select:none}",
   map: null
 };
-function modulo(n, m) {
-  return (n % m + m) % m;
-}
-var Counter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let offset;
-  let offsetPercent;
-  let $displayed_count, $$unsubscribe_displayed_count;
-  let count = 0;
-  const displayed_count = spring();
-  $$unsubscribe_displayed_count = subscribe(displayed_count, (value) => $displayed_count = value);
+var HeroProfile = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$5);
-  {
-    displayed_count.set(count);
-  }
-  offset = modulo($displayed_count, 1);
-  offsetPercent = offset * 100;
-  $$unsubscribe_displayed_count();
-  return `<div class="${"counter svelte-18fdd0i"}"><button aria-label="${"Decrease the counter by one"}" class="${"svelte-18fdd0i"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-18fdd0i"}"><path d="${"M0,0.5 L1,0.5"}" class="${"svelte-18fdd0i"}"></path></svg></button>
-
-	<div class="${"counter-viewport svelte-18fdd0i"}"><div class="${"counter-digits svelte-18fdd0i"}" style="${"transform: translate(0, " + escape(offsetPercent) + "%)"}"><strong style="${"top: -100%"}" aria-hidden="${"true"}" class="${"svelte-18fdd0i"}">${escape(Math.floor($displayed_count + 1))}</strong>
-			<strong class="${"svelte-18fdd0i"}">${escape(Math.floor($displayed_count))}</strong></div></div>
-
-	<button aria-label="${"Increase the counter by one"}" class="${"svelte-18fdd0i"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-18fdd0i"}"><path d="${"M0,0.5 L1,0.5 M0.5,0 L0.5,1"}" class="${"svelte-18fdd0i"}"></path></svg></button>
+  return `<div class="${"outer svelte-1y3qlhg"}"><div class="${"bg svelte-1y3qlhg"}"></div>
+	<img class="${"image svelte-1y3qlhg"}" src="${"images/headshot.png"}" alt="${"Profile"}">
+	<div class="${"name svelte-1y3qlhg"}">Pro</div>
 </div>`;
 });
 var css$4 = {
-  code: ".outer.svelte-14t06o5{width:100%;max-width:1000px;padding:0 var(--theme-spacing-6) var(--theme-spacing-6) var(--theme-spacing-6);display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-14t06o5{flex:6;padding-right:var(--theme-spacing-5)}.last.svelte-14t06o5{flex:5;padding-left:var(--theme-spacing-5)}.image.svelte-14t06o5{width:100%;object-fit:cover}.heading1.svelte-14t06o5{font-size:54px;font-weight:700}.heading2.svelte-14t06o5{font-size:18px;font-weight:400;line-height:28px;margin-top:var(--theme-spacing-3)}.button.svelte-14t06o5{margin-top:var(--theme-spacing-4)}@media screen and (max-width: 700px){.outer.svelte-14t06o5{flex-direction:column}.last.svelte-14t06o5{margin-top:var(--theme-spacing-5)}}",
+  code: ".outer.svelte-1xjhje6{width:100%;max-width:1200px;display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-1xjhje6{flex:5;display:flex}.last.svelte-1xjhje6{flex:5}.profileContainer.svelte-1xjhje6{width:90%;display:flex;align-items:center;justify-content:center}.heading1.svelte-1xjhje6{font-size:54px;font-weight:800}.heading2.svelte-1xjhje6{font-size:18px;font-weight:400;line-height:28px;margin-top:var(--theme-spacing-3)}.button.svelte-1xjhje6{margin-top:var(--theme-spacing-4)}@media screen and (max-width: 700px){.outer.svelte-1xjhje6{flex-direction:column}.first.svelte-1xjhje6{justify-content:center}.last.svelte-1xjhje6{margin-top:var(--theme-spacing-5)}}",
   map: null
 };
 var Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$4);
-  return `<div class="${"outer svelte-14t06o5"}"><div class="${"first svelte-14t06o5"}"><img class="${"image svelte-14t06o5"}" src="${"images/headshot.jpg"}" alt="${"Profile"}"></div>
-	<div class="${"last svelte-14t06o5"}"><h1 class="${"heading1 svelte-14t06o5"}">Will Tesler
+  return `<div class="${"outer svelte-1xjhje6"}"><div class="${"first svelte-1xjhje6"}"><div class="${"profileContainer svelte-1xjhje6"}">${validate_component(HeroProfile, "HeroProfile").$$render($$result, {}, {}, {})}</div></div>
+	<div class="${"last svelte-1xjhje6"}"><h1 class="${"heading1 svelte-1xjhje6"}">Will Tesler
 		</h1>
-		<h2 class="${"heading2 svelte-14t06o5"}">Software Engineer and Web Developer at the forefront of the Modern Web.
+		<h2 class="${"heading2 svelte-1xjhje6"}">Software Engineer and Web Developer at the forefront of the Modern Web.
 		</h2>
-		<div class="${"button svelte-14t06o5"}">${validate_component(Button, "Button").$$render($$result, {}, {}, {
+		<div class="${"button svelte-1xjhje6"}">${validate_component(Button, "Button").$$render($$result, {}, {}, {
     default: () => `Contact
 			`
   })}</div></div>
 </div>`;
 });
 var css$3 = {
-  code: "section.svelte-1ugkb6p{width:100%;display:flex;flex-direction:column;align-items:center}",
+  code: "section.svelte-15fs1bz{width:100%;display:flex;flex-direction:column;align-items:center;padding:0 var(--theme-spacing-7) var(--theme-spacing-7) var(--theme-spacing-7)}",
   map: null
 };
 var prerender$2 = true;
@@ -6861,11 +6674,7 @@ var Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$3);
   return `${$$result.head += `${$$result.title = `<title>Home</title>`, ""}`, ""}
 
-<section class="${"svelte-1ugkb6p"}">${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})}
-
-	<h2>try editing <strong>src/routes/index.svelte</strong></h2>
-
-	${validate_component(Counter, "Counter").$$render($$result, {}, {}, {})}
+<section class="${"svelte-15fs1bz"}">${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})}
 </section>`;
 });
 var index$1 = /* @__PURE__ */ Object.freeze({

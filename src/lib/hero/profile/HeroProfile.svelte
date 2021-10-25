@@ -26,22 +26,25 @@
 		background-color: var(--hero-profile-bg-color);
 		border-radius: 200px 200px 0 0;
 		box-shadow: 5px 5px 40px 0 var(--hero-profile-bg-shadow);
+		border-top: 5px solid #ffcdcd;
+		border-right: 5px solid #ffcdcd;
+		border-left: 5px solid #ffcdcd;
 	}
 
   .image {
 		width: 100%;
-		max-width: 300px;
+		max-width: 350px;
     object-fit: cover;
 		position: relative;
   }
 
 	.name {
     position: absolute;
-		transform: rotateZ(-45deg);
+		transform: rotateZ(-90deg);
 		font-weight: 900;
 		font-size: 70px;
-		top: 15%;
-		left: -5%;
+		top: 50%;
+		left: 4%;
 		margin: auto 0;
 		color: white;
 		text-shadow: -5px -5px var(--hero-profile-bg-color);
