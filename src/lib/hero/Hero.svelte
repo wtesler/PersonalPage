@@ -14,7 +14,7 @@ import HeroProfile from '$lib/hero/profile/HeroProfile.svelte';
 			Will Tesler
 		</h1>
 		<h2 class='heading2'>
-			Software Engineer and Web Developer at the forefront of the Modern Web.
+			Software Engineer and Web Developer leading the modern web revolution.
 		</h2>
 		<div class='button'>
 			<Button>
@@ -43,6 +43,8 @@ import HeroProfile from '$lib/hero/profile/HeroProfile.svelte';
 
 	.last {
 		flex: 5;
+		display: flex;
+		flex-direction: column;
     /*padding-left: var(--theme-spacing-9);*/
   }
 
@@ -80,6 +82,9 @@ import HeroProfile from '$lib/hero/profile/HeroProfile.svelte';
 
 		.last {
 			margin-top: var(--theme-spacing-5);
-		}
+      justify-content: center;
+			align-items: center;
+			text-align: center;
+    }
   }
 </style>

@@ -57,6 +57,12 @@
 		pointer-events: none;
 	}
 
+  @media screen and (max-width: 700px) {
+    .center {
+			display: none;
+    }
+  }
+
 	.link {
 		padding: 0 1.5px 1px 1.5px;
 		margin: 0 var(--theme-spacing-4);

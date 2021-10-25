@@ -11,8 +11,8 @@
 <style>
 	.outer {
 		position: relative;
-    --hero-profile-bg-color: #e14765FF;
-    --hero-profile-bg-shadow: #e1476588;
+    --hero-profile-bg-color: #47b6e1FF;
+    --hero-profile-bg-shadow: #47b6e188;
   }
 
 	.bg {
@@ -26,9 +26,9 @@
 		background-color: var(--hero-profile-bg-color);
 		border-radius: 200px 200px 0 0;
 		box-shadow: 5px 5px 40px 0 var(--hero-profile-bg-shadow);
-		border-top: 5px solid #ffcdcd;
-		border-right: 5px solid #ffcdcd;
-		border-left: 5px solid #ffcdcd;
+		border: 5px solid #8ecce7;
+		/*border-right: 5px solid #8ecce7;*/
+		/*border-left: 5px solid #8ecce7;*/
 	}
 
   .image {
@@ -36,6 +36,7 @@
 		max-width: 350px;
     object-fit: cover;
 		position: relative;
+		bottom: 5px;
   }
 
 	.name {
