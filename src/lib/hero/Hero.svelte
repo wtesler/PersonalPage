@@ -25,8 +25,8 @@ import Button from '$lib/button/Button.svelte';
 <style>
 	.outer {
 		width: 100%;
-		max-width: 1000px;
-		padding: 0 var(--theme-spacing-6) var(--theme-spacing-6) var(--theme-spacing-6);
+		max-width: 1200px;
+		/*padding: 0 var(--theme-spacing-6) var(--theme-spacing-6) var(--theme-spacing-6);*/
 		display: flex;
 		flex-direction: row;
 		position: relative;
@@ -35,22 +35,23 @@ import Button from '$lib/button/Button.svelte';
 
 	.first {
 		flex: 6;
-		padding-right: var(--theme-spacing-5);
+		display: flex;
+		/*padding-right: var(--theme-spacing-9);*/
 	}
 
 	.last {
 		flex: 5;
-    padding-left: var(--theme-spacing-5);
+    /*padding-left: var(--theme-spacing-9);*/
   }
 
 	.image {
-		width: 100%;
+		width: 90%;
 		object-fit: cover;
 	}
 
 	.heading1 {
 		font-size: 54px;
-		font-weight: 700;
+		font-weight: 800;
 	}
 
 	.heading2 {
@@ -67,6 +68,10 @@ import Button from '$lib/button/Button.svelte';
   @media screen and (max-width: 700px) {
     .outer {
 			flex-direction: column;
+		}
+
+		.first {
+			justify-content: center;
 		}
 
 		.last {

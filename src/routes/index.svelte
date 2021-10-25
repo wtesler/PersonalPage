@@ -27,5 +27,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
+    padding: 0 var(--theme-spacing-7) var(--theme-spacing-7) var(--theme-spacing-7);
+  }
 </style>
