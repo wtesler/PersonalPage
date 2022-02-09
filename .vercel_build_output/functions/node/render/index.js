@@ -5608,7 +5608,7 @@ var init_layout_svelte = __esm({
       }
     };
     css$1 = {
-      code: ".outer.svelte-1f8tjtr{width:100%;padding:var(--theme-spacing-7);display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-1f8tjtr{font-weight:700;font-size:18px}.center.svelte-1f8tjtr{display:flex;flex-direction:row;position:absolute;left:0;right:0;align-items:center;justify-content:center;pointer-events:none}@media screen and (max-width: 700px){.center.svelte-1f8tjtr{display:none}}.link.svelte-1f8tjtr{padding:0 1.5px 1px 1.5px;margin:0 var(--theme-spacing-4);pointer-events:auto;border-bottom:2px solid transparent;text-decoration:none;color:black;font-weight:600}.link.active.svelte-1f8tjtr{border-bottom:2px solid black}.last.svelte-1f8tjtr{margin-left:auto}",
+      code: ".outer.svelte-hogn97{width:100%;padding:var(--theme-spacing-7);display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-hogn97{font-weight:700;font-size:18px}.center.svelte-hogn97{display:flex;flex-direction:row;position:absolute;left:0;right:0;align-items:center;justify-content:center;pointer-events:none}@media screen and (max-width: 700px){.center.svelte-hogn97{display:none}}.link.svelte-hogn97{padding:0 1.5px 1px 1.5px;margin:0 var(--theme-spacing-4);pointer-events:auto;border-bottom:2px solid transparent;text-decoration:none;color:black;font-weight:600}.link.active.svelte-hogn97{border-bottom:2px solid black}.last.svelte-hogn97{margin-left:auto}",
       map: null
     };
     NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -5624,18 +5624,18 @@ var init_layout_svelte = __esm({
       };
       $$result.css.add(css$1);
       $$unsubscribe_page();
-      return `<nav class="${"outer svelte-1f8tjtr"}"><div class="${"first svelte-1f8tjtr"}">will tesler.
+      return `<nav class="${"outer svelte-hogn97"}"><div class="${"first svelte-hogn97"}">will tesler.
 	</div>
-	<div class="${"center svelte-1f8tjtr"}">${each(PATHS, (pathObj) => {
-        return `<a class="${["link svelte-1f8tjtr", $page.url.pathname === pathObj.path ? "active" : ""].join(" ").trim()}" sveltekit:prefetch${add_attribute("href", pathObj.path, 0)}>${escape(pathObj.name)}
+	<div class="${"center svelte-hogn97"}">${each(PATHS, (pathObj) => {
+        return `<a class="${["link svelte-hogn97", $page.url.pathname === pathObj.path ? "active" : ""].join(" ").trim()}" sveltekit:prefetch${add_attribute("href", pathObj.path, 0)}>${escape(pathObj.name)}
 			</a>`;
       })}</div>
-	<div class="${"last svelte-1f8tjtr"}">${validate_component(Button, "Button").$$render($$result, { onClick: onContactClick }, {}, {
+	<div class="${"last svelte-hogn97"}"><a href="${"mailto:willtesler@gmail.com"}">${validate_component(Button, "Button").$$render($$result, { onClick: onContactClick }, {}, {
         default: () => {
           return `Contact
-		`;
+			`;
         }
-      })}</div>
+      })}</a></div>
 </nav>`;
     });
     css2 = {
@@ -5668,9 +5668,9 @@ var entry, js, css3;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
-    entry = "pages/__layout.svelte-523d9874.js";
-    js = ["pages/__layout.svelte-523d9874.js", "chunks/vendor-b6a86891.js", "chunks/Button-d880017f.js"];
-    css3 = ["assets/pages/__layout.svelte-bbb70fa8.css", "assets/Button-1e201031.css"];
+    entry = "pages/__layout.svelte-97ad063e.js";
+    js = ["pages/__layout.svelte-97ad063e.js", "chunks/vendor-b6a86891.js", "chunks/Button-d880017f.js"];
+    css3 = ["assets/pages/__layout.svelte-d5b964e1.css", "assets/Button-1e201031.css"];
   }
 });
 
@@ -7880,7 +7880,7 @@ var manifest = {
   assets: new Set(["favicon.png", "fonts/ProximaNova/ProximaNova-Black.woff", "fonts/ProximaNova/ProximaNova-Bold.woff", "fonts/ProximaNova/ProximaNova-Extrabld.woff", "fonts/ProximaNova/ProximaNova-Light.woff", "fonts/ProximaNova/ProximaNova-Regular.woff", "fonts/ProximaNova/ProximaNova-Semibold.woff", "fonts/ProximaNova/ProximaNova-Thin.woff", "images/background.svg", "images/headshot.png", "robots.txt", "svelte-welcome.png", "svelte-welcome.webp"]),
   _: {
     mime: { ".png": "image/png", ".woff": "font/woff", ".svg": "image/svg+xml", ".txt": "text/plain", ".webp": "image/webp" },
-    entry: { "file": "start-73cfd080.js", "js": ["start-73cfd080.js", "chunks/vendor-b6a86891.js"], "css": [] },
+    entry: { "file": "start-ba820c3e.js", "js": ["start-ba820c3e.js", "chunks/vendor-b6a86891.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
