@@ -6194,6 +6194,32 @@ function getContext(key) {
   return get_current_component().$$.context.get(key);
 }
 Promise.resolve();
+var boolean_attributes = new Set([
+  "allowfullscreen",
+  "allowpaymentrequest",
+  "async",
+  "autofocus",
+  "autoplay",
+  "checked",
+  "controls",
+  "default",
+  "defer",
+  "disabled",
+  "formnovalidate",
+  "hidden",
+  "ismap",
+  "loop",
+  "multiple",
+  "muted",
+  "nomodule",
+  "novalidate",
+  "open",
+  "playsinline",
+  "readonly",
+  "required",
+  "reversed",
+  "selected"
+]);
 var escaped = {
   '"': "&quot;",
   "'": "&#39;",
@@ -6260,7 +6286,7 @@ function create_ssr_component(fn) {
 function add_attribute(name, value, boolean) {
   if (value == null || boolean && !value)
     return "";
-  return ` ${name}${value === true ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
+  return ` ${name}${value === true && boolean_attributes.has(name) ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
 }
 function afterUpdate() {
 }
@@ -6297,9 +6323,13 @@ var Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 ${validate_component(components[0] || missing_component, "svelte:component").$$render($$result, Object.assign(props_0 || {}), {}, {
-    default: () => `${components[1] ? `${validate_component(components[1] || missing_component, "svelte:component").$$render($$result, Object.assign(props_1 || {}), {}, {
-      default: () => `${components[2] ? `${validate_component(components[2] || missing_component, "svelte:component").$$render($$result, Object.assign(props_2 || {}), {}, {})}` : ``}`
-    })}` : ``}`
+    default: () => {
+      return `${components[1] ? `${validate_component(components[1] || missing_component, "svelte:component").$$render($$result, Object.assign(props_1 || {}), {}, {
+        default: () => {
+          return `${components[2] ? `${validate_component(components[2] || missing_component, "svelte:component").$$render($$result, Object.assign(props_2 || {}), {}, {})}` : ``}`;
+        }
+      })}` : ``}`;
+    }
   })}
 
 ${``}`;
@@ -6343,9 +6373,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-2e6b9c1c.js",
+      file: assets + "/_app/start-a60f68e5.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-2e6b9c1c.js", assets + "/_app/chunks/vendor-dd5e282b.js"]
+      js: [assets + "/_app/start-a60f68e5.js", assets + "/_app/chunks/vendor-1bfc338e.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6451,7 +6481,7 @@ var module_lookup = {
     return index;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-08ab5507.js", "css": ["assets/pages/__layout.svelte-e4e69471.css", "assets/Button-1e201031.css"], "js": ["pages/__layout.svelte-08ab5507.js", "chunks/vendor-dd5e282b.js", "chunks/Button-28fad74b.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-976283ef.js", "css": [], "js": ["error.svelte-976283ef.js", "chunks/vendor-dd5e282b.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-2ad96f44.js", "css": ["assets/pages/index.svelte-76b84aad.css", "assets/Button-1e201031.css"], "js": ["pages/index.svelte-2ad96f44.js", "chunks/vendor-dd5e282b.js", "chunks/Button-28fad74b.js"], "styles": [] }, "src/routes/portfolio.svelte": { "entry": "pages/portfolio.svelte-659b4b73.js", "css": ["assets/pages/portfolio.svelte-3ae69461.css"], "js": ["pages/portfolio.svelte-659b4b73.js", "chunks/vendor-dd5e282b.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-889478dc.js", "css": ["assets/pages/portfolio.svelte-3ae69461.css"], "js": ["pages/about.svelte-889478dc.js", "chunks/vendor-dd5e282b.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-4f579a74.js", "css": ["assets/pages/todos/index.svelte-784042c1.css"], "js": ["pages/todos/index.svelte-4f579a74.js", "chunks/vendor-dd5e282b.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-7b97d816.js", "css": ["assets/pages/__layout.svelte-e4e69471.css", "assets/Button-1e201031.css"], "js": ["pages/__layout.svelte-7b97d816.js", "chunks/vendor-1bfc338e.js", "chunks/Button-9535cc24.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-8b482efa.js", "css": [], "js": ["error.svelte-8b482efa.js", "chunks/vendor-1bfc338e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-fee8b579.js", "css": ["assets/pages/index.svelte-76b84aad.css", "assets/Button-1e201031.css"], "js": ["pages/index.svelte-fee8b579.js", "chunks/vendor-1bfc338e.js", "chunks/Button-9535cc24.js"], "styles": [] }, "src/routes/portfolio.svelte": { "entry": "pages/portfolio.svelte-7e1baf31.js", "css": ["assets/pages/portfolio.svelte-3ae69461.css"], "js": ["pages/portfolio.svelte-7e1baf31.js", "chunks/vendor-1bfc338e.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-b1e92d31.js", "css": ["assets/pages/portfolio.svelte-3ae69461.css"], "js": ["pages/about.svelte-b1e92d31.js", "chunks/vendor-1bfc338e.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-86ca6203.js", "css": ["assets/pages/todos/index.svelte-784042c1.css"], "js": ["pages/todos/index.svelte-86ca6203.js", "chunks/vendor-1bfc338e.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -6584,11 +6614,15 @@ var NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page();
   return `<nav class="${"outer svelte-1f8tjtr"}"><div class="${"first svelte-1f8tjtr"}">will tesler.
 	</div>
-	<div class="${"center svelte-1f8tjtr"}">${each(PATHS, (pathObj) => `<a class="${["link svelte-1f8tjtr", $page.path === pathObj.path ? "active" : ""].join(" ").trim()}" sveltekit:prefetch${add_attribute("href", pathObj.path, 0)}>${escape(pathObj.name)}
-			</a>`)}</div>
+	<div class="${"center svelte-1f8tjtr"}">${each(PATHS, (pathObj) => {
+    return `<a class="${["link svelte-1f8tjtr", $page.path === pathObj.path ? "active" : ""].join(" ").trim()}" sveltekit:prefetch${add_attribute("href", pathObj.path, 0)}>${escape(pathObj.name)}
+			</a>`;
+  })}</div>
 	<div class="${"last svelte-1f8tjtr"}">${validate_component(Button, "Button").$$render($$result, { onClick: onContactClick }, {}, {
-    default: () => `Contact
-		`
+    default: () => {
+      return `Contact
+		`;
+    }
   })}</div>
 </nav>`;
 });
@@ -6660,8 +6694,10 @@ var Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 		<h2 class="${"heading2 svelte-1gl4qbx"}">Software Engineer and Web Developer leading the modern web revolution.
 		</h2>
 		<div class="${"button svelte-1gl4qbx"}"><a href="${"mailto:willtesler@gmail.com"}">${validate_component(Button, "Button").$$render($$result, {}, {}, {
-    default: () => `Contact
-				`
+    default: () => {
+      return `Contact
+				`;
+    }
   })}</a></div></div>
 </div>`;
 });
@@ -6783,14 +6819,16 @@ var Todos = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 	<form class="${"new svelte-dmxqmd"}" action="${"/todos.json"}" method="${"post"}"><input name="${"text"}" aria-label="${"Add todo"}" placeholder="${"+ tap to add a todo"}" class="${"svelte-dmxqmd"}"></form>
 
-	${each(todos, (todo) => `<div class="${["todo svelte-dmxqmd", todo.done ? "done" : ""].join(" ").trim()}"><form action="${"/todos/" + escape(todo.uid) + ".json?_method=patch"}" method="${"post"}"><input type="${"hidden"}" name="${"done"}"${add_attribute("value", todo.done ? "" : "true", 0)} class="${"svelte-dmxqmd"}">
+	${each(todos, (todo) => {
+    return `<div class="${["todo svelte-dmxqmd", todo.done ? "done" : ""].join(" ").trim()}"><form action="${"/todos/" + escape(todo.uid) + ".json?_method=patch"}" method="${"post"}"><input type="${"hidden"}" name="${"done"}"${add_attribute("value", todo.done ? "" : "true", 0)} class="${"svelte-dmxqmd"}">
 				<button class="${"toggle svelte-dmxqmd"}" aria-label="${"Mark todo as " + escape(todo.done ? "not done" : "done")}"></button></form>
 
 			<form class="${"text svelte-dmxqmd"}" action="${"/todos/" + escape(todo.uid) + ".json?_method=patch"}" method="${"post"}"><input aria-label="${"Edit todo"}" type="${"text"}" name="${"text"}"${add_attribute("value", todo.text, 0)} class="${"svelte-dmxqmd"}">
 				<button class="${"save svelte-dmxqmd"}" aria-label="${"Save todo"}"></button></form>
 
 			<form action="${"/todos/" + escape(todo.uid) + ".json?_method=delete"}" method="${"post"}"><button class="${"delete svelte-dmxqmd"}" aria-label="${"Delete todo"}" ${todo.pending_delete ? "disabled" : ""}></button></form>
-		</div>`)}
+		</div>`;
+  })}
 </div>`;
 });
 var index = /* @__PURE__ */ Object.freeze({
