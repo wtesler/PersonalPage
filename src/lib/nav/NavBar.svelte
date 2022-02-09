@@ -19,7 +19,7 @@
 	</div>
 	<div class='center'>
 		{#each PATHS as pathObj}
-			<a class='link' class:active={$page.path === pathObj.path} sveltekit:prefetch href={pathObj.path}>
+			<a class='link' class:active={$page.url.pathname === pathObj.path} sveltekit:prefetch href={pathObj.path}>
 				{pathObj.name}
 			</a>
 		{/each}
