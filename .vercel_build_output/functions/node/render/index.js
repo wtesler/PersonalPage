@@ -5650,8 +5650,7 @@ ${validate_component(NavBar, "NavBar").$$render($$result, {}, {}, {})}
 
 <main class="${"main svelte-1cldrb5"}">${slots.default ? slots.default({}) : ``}</main>
 
-<footer><p>visit <a href="${"https://kit.svelte.dev"}">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>`;
+<footer></footer>`;
     });
   }
 });
@@ -5668,8 +5667,8 @@ var entry, js, css3;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
-    entry = "pages/__layout.svelte-97ad063e.js";
-    js = ["pages/__layout.svelte-97ad063e.js", "chunks/vendor-b6a86891.js", "chunks/Button-d880017f.js"];
+    entry = "pages/__layout.svelte-751457c4.js";
+    js = ["pages/__layout.svelte-751457c4.js", "chunks/vendor-b6a86891.js", "chunks/Button-d880017f.js"];
     css3 = ["assets/pages/__layout.svelte-d5b964e1.css", "assets/Button-1e201031.css"];
   }
 });
@@ -7880,7 +7879,7 @@ var manifest = {
   assets: new Set(["favicon.png", "fonts/ProximaNova/ProximaNova-Black.woff", "fonts/ProximaNova/ProximaNova-Bold.woff", "fonts/ProximaNova/ProximaNova-Extrabld.woff", "fonts/ProximaNova/ProximaNova-Light.woff", "fonts/ProximaNova/ProximaNova-Regular.woff", "fonts/ProximaNova/ProximaNova-Semibold.woff", "fonts/ProximaNova/ProximaNova-Thin.woff", "images/background.svg", "images/headshot.png", "robots.txt", "svelte-welcome.png", "svelte-welcome.webp"]),
   _: {
     mime: { ".png": "image/png", ".woff": "font/woff", ".svg": "image/svg+xml", ".txt": "text/plain", ".webp": "image/webp" },
-    entry: { "file": "start-ba820c3e.js", "js": ["start-ba820c3e.js", "chunks/vendor-b6a86891.js"], "css": [] },
+    entry: { "file": "start-24ef8069.js", "js": ["start-24ef8069.js", "chunks/vendor-b6a86891.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
