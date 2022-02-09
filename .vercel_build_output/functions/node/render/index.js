@@ -6343,9 +6343,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-dc2f4f20.js",
+      file: assets + "/_app/start-2e6b9c1c.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-dc2f4f20.js", assets + "/_app/chunks/vendor-dd5e282b.js"]
+      js: [assets + "/_app/start-2e6b9c1c.js", assets + "/_app/chunks/vendor-dd5e282b.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6375,7 +6375,7 @@ function init(settings = default_settings) {
 var d = (s2) => s2.replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
 var empty = () => ({});
 var manifest = {
-  assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "fonts/ProximaNova/ProximaNova-Black.woff", "size": 25200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Bold.woff", "size": 26336, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Extrabld.woff", "size": 26060, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Light.woff", "size": 42032, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Regular.woff", "size": 26128, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Semibold.woff", "size": 26200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Thin.woff", "size": 25032, "type": "font/woff" }, { "file": "images/background.svg", "size": 1604, "type": "image/svg+xml" }, { "file": "images/headshot.jpg", "size": 59605, "type": "image/jpeg" }, { "file": "images/headshot.png", "size": 121321, "type": "image/png" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }, { "file": "svelte-welcome.png", "size": 360807, "type": "image/png" }, { "file": "svelte-welcome.webp", "size": 115470, "type": "image/webp" }],
+  assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "fonts/ProximaNova/ProximaNova-Black.woff", "size": 25200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Bold.woff", "size": 26336, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Extrabld.woff", "size": 26060, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Light.woff", "size": 42032, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Regular.woff", "size": 26128, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Semibold.woff", "size": 26200, "type": "font/woff" }, { "file": "fonts/ProximaNova/ProximaNova-Thin.woff", "size": 25032, "type": "font/woff" }, { "file": "images/background.svg", "size": 1604, "type": "image/svg+xml" }, { "file": "images/headshot.png", "size": 401775, "type": "image/png" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }, { "file": "svelte-welcome.png", "size": 360807, "type": "image/png" }, { "file": "svelte-welcome.webp", "size": 115470, "type": "image/webp" }],
   layout: "src/routes/__layout.svelte",
   error: ".svelte-kit/build/components/error.svelte",
   routes: [
@@ -6451,7 +6451,7 @@ var module_lookup = {
     return index;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-c0166270.js", "css": ["assets/pages/__layout.svelte-09b7aa13.css", "assets/Button-1e201031.css"], "js": ["pages/__layout.svelte-c0166270.js", "chunks/vendor-dd5e282b.js", "chunks/Button-28fad74b.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-976283ef.js", "css": [], "js": ["error.svelte-976283ef.js", "chunks/vendor-dd5e282b.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-417cc346.js", "css": ["assets/pages/index.svelte-02fa6d71.css", "assets/Button-1e201031.css"], "js": ["pages/index.svelte-417cc346.js", "chunks/vendor-dd5e282b.js", "chunks/Button-28fad74b.js"], "styles": [] }, "src/routes/portfolio.svelte": { "entry": "pages/portfolio.svelte-659b4b73.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/portfolio.svelte-659b4b73.js", "chunks/vendor-dd5e282b.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-889478dc.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/about.svelte-889478dc.js", "chunks/vendor-dd5e282b.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-4f579a74.js", "css": ["assets/pages/todos/index.svelte-784042c1.css"], "js": ["pages/todos/index.svelte-4f579a74.js", "chunks/vendor-dd5e282b.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-08ab5507.js", "css": ["assets/pages/__layout.svelte-e4e69471.css", "assets/Button-1e201031.css"], "js": ["pages/__layout.svelte-08ab5507.js", "chunks/vendor-dd5e282b.js", "chunks/Button-28fad74b.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-976283ef.js", "css": [], "js": ["error.svelte-976283ef.js", "chunks/vendor-dd5e282b.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-2ad96f44.js", "css": ["assets/pages/index.svelte-76b84aad.css", "assets/Button-1e201031.css"], "js": ["pages/index.svelte-2ad96f44.js", "chunks/vendor-dd5e282b.js", "chunks/Button-28fad74b.js"], "styles": [] }, "src/routes/portfolio.svelte": { "entry": "pages/portfolio.svelte-659b4b73.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/portfolio.svelte-659b4b73.js", "chunks/vendor-dd5e282b.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-889478dc.js", "css": ["assets/pages/about.svelte-bf4528fa.css"], "js": ["pages/about.svelte-889478dc.js", "chunks/vendor-dd5e282b.js", "chunks/env-a13806e5.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-4f579a74.js", "css": ["assets/pages/todos/index.svelte-784042c1.css"], "js": ["pages/todos/index.svelte-4f579a74.js", "chunks/vendor-dd5e282b.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -6566,7 +6566,7 @@ var Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 </div>`;
 });
 var css$7 = {
-  code: ".outer.svelte-194cp6y{width:100%;padding:var(--theme-spacing-7);display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-194cp6y{font-weight:700;font-size:18px}.center.svelte-194cp6y{display:flex;flex-direction:row;position:absolute;left:0;right:0;align-items:center;justify-content:center;pointer-events:none}.link.svelte-194cp6y{padding:0 1.5px 1px 1.5px;margin:0 var(--theme-spacing-4);pointer-events:auto;border-bottom:2px solid transparent;text-decoration:none;color:black;font-weight:600}.link.active.svelte-194cp6y{border-bottom:2px solid black}.last.svelte-194cp6y{margin-left:auto}",
+  code: ".outer.svelte-1f8tjtr{width:100%;padding:var(--theme-spacing-7);display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-1f8tjtr{font-weight:700;font-size:18px}.center.svelte-1f8tjtr{display:flex;flex-direction:row;position:absolute;left:0;right:0;align-items:center;justify-content:center;pointer-events:none}@media screen and (max-width: 700px){.center.svelte-1f8tjtr{display:none}}.link.svelte-1f8tjtr{padding:0 1.5px 1px 1.5px;margin:0 var(--theme-spacing-4);pointer-events:auto;border-bottom:2px solid transparent;text-decoration:none;color:black;font-weight:600}.link.active.svelte-1f8tjtr{border-bottom:2px solid black}.last.svelte-1f8tjtr{margin-left:auto}",
   map: null
 };
 var NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -6582,11 +6582,11 @@ var NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   };
   $$result.css.add(css$7);
   $$unsubscribe_page();
-  return `<nav class="${"outer svelte-194cp6y"}"><div class="${"first svelte-194cp6y"}">will tesler.
+  return `<nav class="${"outer svelte-1f8tjtr"}"><div class="${"first svelte-1f8tjtr"}">will tesler.
 	</div>
-	<div class="${"center svelte-194cp6y"}">${each(PATHS, (pathObj) => `<a class="${["link svelte-194cp6y", $page.path === pathObj.path ? "active" : ""].join(" ").trim()}" sveltekit:prefetch${add_attribute("href", pathObj.path, 0)}>${escape(pathObj.name)}
+	<div class="${"center svelte-1f8tjtr"}">${each(PATHS, (pathObj) => `<a class="${["link svelte-1f8tjtr", $page.path === pathObj.path ? "active" : ""].join(" ").trim()}" sveltekit:prefetch${add_attribute("href", pathObj.path, 0)}>${escape(pathObj.name)}
 			</a>`)}</div>
-	<div class="${"last svelte-194cp6y"}">${validate_component(Button, "Button").$$render($$result, { onClick: onContactClick }, {}, {
+	<div class="${"last svelte-1f8tjtr"}">${validate_component(Button, "Button").$$render($$result, { onClick: onContactClick }, {}, {
     default: () => `Contact
 		`
   })}</div>
@@ -6638,31 +6638,31 @@ var error = /* @__PURE__ */ Object.freeze({
   load: load$1
 });
 var css$5 = {
-  code: ".outer.svelte-1y3qlhg{position:relative;--hero-profile-bg-color:#e14765FF;--hero-profile-bg-shadow:#e1476588}.bg.svelte-1y3qlhg{width:95%;height:90%;top:10%;left:0;right:0;margin:0 auto;position:absolute;background-color:var(--hero-profile-bg-color);border-radius:200px 200px 0 0;box-shadow:5px 5px 40px 0 var(--hero-profile-bg-shadow)}.image.svelte-1y3qlhg{width:100%;max-width:300px;object-fit:cover;position:relative}.name.svelte-1y3qlhg{position:absolute;transform:rotateZ(-45deg);font-weight:900;font-size:70px;top:15%;left:-5%;margin:auto 0;color:white;text-shadow:-5px -5px var(--hero-profile-bg-color);user-select:none}",
+  code: ".outer.svelte-1s36rch{position:relative;--hero-profile-bg-color:#47b6e1FF;--hero-profile-bg-shadow:#47b6e188}.bg.svelte-1s36rch{width:95%;height:90%;top:10%;left:0;right:0;margin:0 auto;position:absolute;background-color:var(--hero-profile-bg-color);border-radius:200px 200px 0 0;box-shadow:5px 5px 40px 0 var(--hero-profile-bg-shadow);border:5px solid #8ecce7}.image.svelte-1s36rch{width:100%;max-width:350px;object-fit:cover;position:relative;bottom:5px}.name.svelte-1s36rch{position:absolute;transform:rotateZ(-90deg);font-weight:900;font-size:70px;top:50%;left:4%;margin:auto 0;color:white;text-shadow:-5px -5px var(--hero-profile-bg-color);user-select:none}",
   map: null
 };
 var HeroProfile = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$5);
-  return `<div class="${"outer svelte-1y3qlhg"}"><div class="${"bg svelte-1y3qlhg"}"></div>
-	<img class="${"image svelte-1y3qlhg"}" src="${"images/headshot.png"}" alt="${"Profile"}">
-	<div class="${"name svelte-1y3qlhg"}">Pro</div>
+  return `<div class="${"outer svelte-1s36rch"}"><div class="${"bg svelte-1s36rch"}"></div>
+	<img class="${"image svelte-1s36rch"}" src="${"images/headshot.png"}" alt="${"Profile"}">
+	<div class="${"name svelte-1s36rch"}">Pro</div>
 </div>`;
 });
 var css$4 = {
-  code: ".outer.svelte-1xjhje6{width:100%;max-width:1200px;display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-1xjhje6{flex:5;display:flex}.last.svelte-1xjhje6{flex:5}.profileContainer.svelte-1xjhje6{width:90%;display:flex;align-items:center;justify-content:center}.heading1.svelte-1xjhje6{font-size:54px;font-weight:800}.heading2.svelte-1xjhje6{font-size:18px;font-weight:400;line-height:28px;margin-top:var(--theme-spacing-3)}.button.svelte-1xjhje6{margin-top:var(--theme-spacing-4)}@media screen and (max-width: 700px){.outer.svelte-1xjhje6{flex-direction:column}.first.svelte-1xjhje6{justify-content:center}.last.svelte-1xjhje6{margin-top:var(--theme-spacing-5)}}",
+  code: ".outer.svelte-1gl4qbx{width:100%;max-width:1200px;display:flex;flex-direction:row;position:relative;align-items:center}.first.svelte-1gl4qbx{flex:5;display:flex}.last.svelte-1gl4qbx{flex:5;display:flex;flex-direction:column}.profileContainer.svelte-1gl4qbx{width:90%;display:flex;align-items:center;justify-content:center}.heading1.svelte-1gl4qbx{font-size:54px;font-weight:800}.heading2.svelte-1gl4qbx{font-size:18px;font-weight:400;line-height:28px;margin-top:var(--theme-spacing-3)}.button.svelte-1gl4qbx{margin-top:var(--theme-spacing-4)}@media screen and (max-width: 700px){.outer.svelte-1gl4qbx{flex-direction:column}.first.svelte-1gl4qbx{justify-content:center}.last.svelte-1gl4qbx{margin-top:var(--theme-spacing-5);justify-content:center;align-items:center;text-align:center}}",
   map: null
 };
 var Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$4);
-  return `<div class="${"outer svelte-1xjhje6"}"><div class="${"first svelte-1xjhje6"}"><div class="${"profileContainer svelte-1xjhje6"}">${validate_component(HeroProfile, "HeroProfile").$$render($$result, {}, {}, {})}</div></div>
-	<div class="${"last svelte-1xjhje6"}"><h1 class="${"heading1 svelte-1xjhje6"}">Will Tesler
+  return `<div class="${"outer svelte-1gl4qbx"}"><div class="${"first svelte-1gl4qbx"}"><div class="${"profileContainer svelte-1gl4qbx"}">${validate_component(HeroProfile, "HeroProfile").$$render($$result, {}, {}, {})}</div></div>
+	<div class="${"last svelte-1gl4qbx"}"><h1 class="${"heading1 svelte-1gl4qbx"}">Will Tesler
 		</h1>
-		<h2 class="${"heading2 svelte-1xjhje6"}">Software Engineer and Web Developer at the forefront of the Modern Web.
+		<h2 class="${"heading2 svelte-1gl4qbx"}">Software Engineer and Web Developer leading the modern web revolution.
 		</h2>
-		<div class="${"button svelte-1xjhje6"}">${validate_component(Button, "Button").$$render($$result, {}, {}, {
+		<div class="${"button svelte-1gl4qbx"}"><a href="${"mailto:willtesler@gmail.com"}">${validate_component(Button, "Button").$$render($$result, {}, {}, {
     default: () => `Contact
-			`
-  })}</div></div>
+				`
+  })}</a></div></div>
 </div>`;
 });
 var css$3 = {

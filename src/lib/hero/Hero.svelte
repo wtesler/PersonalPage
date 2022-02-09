@@ -17,9 +17,11 @@ import HeroProfile from '$lib/hero/profile/HeroProfile.svelte';
 			Software Engineer and Web Developer leading the modern web revolution.
 		</h2>
 		<div class='button'>
-			<Button>
-				Contact
-			</Button>
+			<a href="mailto:willtesler@gmail.com">
+				<Button>
+					Contact
+				</Button>
+			</a>
 		</div>
 	</div>
 </div>
